@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Abril_Display_Bold.otf">
+            <string>AbrilDisplay-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CupcakeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="title" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ewh-ZA-TDb">
+                                <rect key="frame" x="20" y="44" width="335" height="194"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ewh-ZA-TDb" secondAttribute="height" multiplier="335:183" constant="-20" id="Jlo-wI-LRM"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynj-vu-7zP">
+                                <rect key="frame" x="20" y="701" width="335" height="67"/>
+                                <color key="backgroundColor" red="0.035294117647058823" green="0.16862745098039217" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="YjX-43-B8B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AbrilDisplay-Bold" family="Abril Display" pointSize="20"/>
+                                <state key="normal" title="Trouve Ton Cupcake ">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="cupcakeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FKn-ue-NFq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SI2-Ue-qlY">
+                                <rect key="frame" x="20" y="258" width="335" height="423"/>
+                                <fontDescription key="fontDescription" name="AbrilDisplay-Bold" family="Abril Display" pointSize="40"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75686274509803919" green="0.82352941176470584" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ynj-vu-7zP" secondAttribute="trailing" constant="20" id="3zu-Nb-53h"/>
+                            <constraint firstItem="ynj-vu-7zP" firstAttribute="top" secondItem="SI2-Ue-qlY" secondAttribute="bottom" constant="20" id="7If-h0-cc2"/>
+                            <constraint firstItem="SI2-Ue-qlY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="I2G-6y-xlg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ewh-ZA-TDb" secondAttribute="trailing" constant="20" id="Inj-WE-0gf"/>
+                            <constraint firstItem="ynj-vu-7zP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ito-2e-2mL"/>
+                            <constraint firstItem="ewh-ZA-TDb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="K8P-ce-sHI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ynj-vu-7zP" secondAttribute="bottom" constant="20" id="KaP-z3-UvQ"/>
+                            <constraint firstItem="ewh-ZA-TDb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LmX-Qf-TYn"/>
+                            <constraint firstItem="ewh-ZA-TDb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="X4q-EH-tHz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ynj-vu-7zP" secondAttribute="trailing" constant="20" id="ai1-Ue-xr2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SI2-Ue-qlY" secondAttribute="trailing" constant="20" id="ccD-JJ-s4i"/>
+                            <constraint firstItem="SI2-Ue-qlY" firstAttribute="top" secondItem="ewh-ZA-TDb" secondAttribute="bottom" constant="20" id="f3K-ff-TxV"/>
+                            <constraint firstItem="ynj-vu-7zP" firstAttribute="top" secondItem="SI2-Ue-qlY" secondAttribute="bottom" constant="20" id="gXg-TW-6GC"/>
+                            <constraint firstItem="SI2-Ue-qlY" firstAttribute="top" secondItem="ewh-ZA-TDb" secondAttribute="bottom" constant="20" id="jjw-JV-8ff"/>
+                            <constraint firstItem="ewh-ZA-TDb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="l2C-qy-XdI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ynj-vu-7zP" secondAttribute="bottom" constant="10" id="pOS-z8-PZY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ewh-ZA-TDb" secondAttribute="trailing" constant="20" id="qBc-XH-wjo"/>
+                            <constraint firstItem="ynj-vu-7zP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vCX-UR-ZBg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="sentenceLabel" destination="SI2-Ue-qlY" id="isn-Hp-BZ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="title" width="353" height="183"/>
+    </resources>
 </document>
